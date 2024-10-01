@@ -1,0 +1,288 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap";
+:root {
+  --main-color: #f7c110;
+  --main-color-dark: #fa5514;
+  --ray-color: #f5de11;
+  --spark-color: #f59f1f;
+  --back-color: #111111;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body{
+  background-color: var(--back-color);
+}
+main{
+  transition: 0.8s;
+  background: #000522;
+}
+.parallax{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.parallax:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #000522, transparent);
+  z-index: 1;
+}
+.parallax img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.parallax2:before{
+  background: linear-gradient(to top, #000000, transparent);
+  z-index: 3;
+}
+.parallax3:before{
+  background: none;
+  z-index: 3;
+}
+
+#text{
+  font-size: 10vw;
+  position: relative;
+  color: #fff;
+  font-size: 11vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Termina el parallax */
+.sec{
+  position: relative;
+  min-height: 500px;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 767px) {
+  .sec{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec .card .card-text p{
+    text-align: center;
+  }
+}
+
+.sec h2{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: #20496a;
+}
+.sec p{
+  font-size: 1.2rem;
+  color: white;
+}
+.card{
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 24px;
+  background: #000522;
+  box-shadow: inset 35px 35px 28px #00020e,
+            inset -35px -35px 28px hsl(231, 100%, 11%);
+  padding: 50px;
+}
+.card p{
+  text-align: center;
+}
+.card-text{
+  width: 100%;
+}
+.button {
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 80%;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: white;
+  color: #000522;
+  border-radius: 9px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+.button:hover{
+  transition: .5s;
+  background-color: #000522;
+  color: white;
+  box-shadow: inset 5px 5px 0px #00020e,
+            inset -5px -5px 0px #000836;
+}
+/* Horizontal */
+.no-container{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.no-container::-webkit-scrollbar {
+  display: none; /* Oculta la barra de scroll horizontal */
+}
+.no-container {
+  scrollbar-width: none; /* Oculta la barra de scroll horizontal */
+}
+.container{
+  width: 100vh;
+  height: 100vw;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100vh);
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+  display: none; /* Oculta la barra de scroll vertical */
+}
+
+.container {
+  scrollbar-width: none; /* Oculta la barra de scroll vertical */
+}
+.wrapper{
+  display: flex;
+  width: 300vw;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100vh);
+}
+.slide {
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Necesario para que los elementos dentro se posicionen en relación a esto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  background-image: url(../img/fondo-wrapper.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.layer #git1{
+  width: 23vw;
+  position: absolute;
+  top: 20vh;
+  left: 75vw;
+}
+.layer #git2{
+  width: 23vw;
+  position: absolute;
+  top: 33vh;
+  left: 55vw;
+}
+.layer #git3{
+  width:23vw;
+  position: absolute;
+  top: 55vh;
+  left: 30vw;
+}
+.layer #git4{
+  width: 23vw;
+  position: absolute;
+  top: 69vh;
+  left: 10vw;
+}
+@media (max-width: 700px) {
+  .layer #git1{
+    width: 40vw;
+    position: absolute;
+    top: 20vh;
+    left: 58vw;
+  }
+  .layer #git2{
+    width: 40vw;
+    position: absolute;
+    top: 35vh;
+    left: 38vw;
+  }
+  .layer #git3{
+    width:40vw;
+    position: absolute;
+    top: 53vh;
+    left: 30vw;
+  }
+  .layer #git4{
+    width: 40vw;
+    position: absolute;
+    top: 69vh;
+    left: 10vw;
+  }
+}
+#comandos{
+  text-align: center;
+}
+/* Aplicar el degradado solo en la primera slide */
+
+.sliderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1; /* Asegúrate de que esté por debajo del degradado */
+  filter: blur();
+}
+
+
+
+/* GENERALES */
+#swipe {
+  width: 35%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  color: white;
+}
+/* Para pantallas grandes donde quieras ocultarlo */
+/* Para pantallas grandes donde quieras ocultarlo */
+@media (min-width: 1200px) {
+  #swipe {
+    display: none; /* Oculta en pantallas grandes */
+  }
+}
+.slide h2{
+  text-align: center;
+  margin: 30px 0 0 0;
+  font-size: 4rem;
+  color: white;
+  text-transform: uppercase;
+}
+.blur{
+  filter: blur(2px);
+}
