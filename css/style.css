@@ -244,6 +244,62 @@ main{
 #comandos{
   text-align: center;
 }
+.layer p {
+  color: white;
+  text-align: left;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  /* Se puede usar margin para espaciar o usar absolute si es necesario */
+}
+
+.layer p span {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#p1 {
+  position: absolute;
+  top: 25vh;
+  margin-left: 10%;
+}
+
+#p2 {
+  position: absolute;
+  top: 35vh;
+  margin-left: 10%;
+}
+
+#p3 {
+  position: absolute;
+  top: 45vh;
+  margin-left: 10%;
+}
+
+#p4 {
+  position: absolute;
+  top: 55vh;
+  margin-left: 10%;
+}
+
+#p5 {
+  position: absolute;
+  top: 65vh;
+  margin-left: 10%;
+}
+
+#p6 {
+  position: absolute;
+  top: 75vh;
+  margin-left: 10%;
+}
+
+@media (min-width: 700px) {
+  /* Ajuste de posicionamiento para pantallas pequeñas */
+  #p1, #p2, #p3, #p4, #p5, #p6 {
+    margin-left: 35%;
+  }
+}
 /* Aplicar el degradado solo en la primera slide */
 
 .sliderBg {
@@ -257,7 +313,17 @@ main{
   z-index: -1; /* Asegúrate de que esté por debajo del degradado */
   filter: blur();
 }
-
+.layer .card h2{
+  margin-top: 0;
+}
+.layer .card{
+  background-color: transparent;
+}
+.layer .card .card-text p{
+  position: static;
+  margin: 0 auto;
+  text-align: center;
+}
 
 
 /* GENERALES */

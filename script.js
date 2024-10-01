@@ -12,8 +12,6 @@ gsap.to("#text",{
     y:250,
 });
 
-
-
 // Selecciona la tarjeta
 const sec = document.querySelector('.sec');
 const cards = document.querySelectorAll('.card');
@@ -48,10 +46,18 @@ cont.onscroll = function(){
   let X = cont.scrollTop;
   
   layer[0].style.left = X/4 + 'px';
-  layer[1].style.left = X/16 + 'px';
-  layer[2].style.left = X/8 + 'px';
-  layer[3].style.left = X/4 + 'px';
-  layer[4].style.left = X/4 + 'px';
+  layer[1].style.left = X/32 + 'px';
+  layer[2].style.left = X/16 + 'px';
+  layer[3].style.left = X/8 + 'px';
+  layer[4].style.left = X/8 + 'px';
+  // comandos
+  layer[5].style.left = X/8 + 'px';
+  layer[6].style.left = X/8 + 'px';
+  layer[7].style.left = X/8 + 'px';
+  layer[8].style.left = X/8 + 'px';
+  layer[9].style.left = X/16 + 'px';
+  layer[10].style.left = X/16 + 'px';
+  layer[11].style.left = X/16 + 'px';
 }
 
 
