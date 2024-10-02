@@ -5,75 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario de aprendizaje</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
 </head>
 <body>
-    <section class="parallax no-container parallax2">
-        <img src="./img/fondo2.jpeg" id="bg" class="blur" alt="">
-        <h1 id="text">Control de versiones</h1>
-    </section>
-    <div class="container">
-        <div class="wrapper">
-            <div class="slide">
-                <div class="layer">
-                    <h2 id="areas">áreas</h2>
-                </div>
-                <div class="layer">
-                    <img src="img/git-1.jpg" id="git1" alt="">
-                </div>
-                <div class="layer">
-                    <img src="img/git-2.jpg" id="git2" alt="">
-                </div>
-                <div class="layer">
-                    <img src="img/git-3.jpg" id="git3" alt="">
-                </div>
-                <div class="layer">
-                    <img src="img/git-4.jpg" id="git4" alt="">
-                </div>
-                <div class="layer">
-                    <img src="img/swipewhite.png" id="swipe" alt="">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="layer">
-                    <h2 id="comandos">Comandos principales</h2>
-                </div>
-                <div class="layer">
-                    <p id="p1"><span>Git init ➟</span>Iniciar el proyecto</p>
-                </div>
-                <div class="layer">
-                    <p id="p2"><span>git add . ➟</span>Añade TODOS los archivos</p>
-                </div>
-                <div class="layer">
-                    <p id="p3"><span>Git branch -M main ➟</span>Te posiciona en la rama main</p>
-                </div>
-                <div class="layer">
-                    <p id="p4"><span>Git remote add [nombre-remoto] [url-repositorio] ➟</span>Crea el repositorio remoto</p>
-                </div>
-                <div class="layer">
-                    <p id="p5"><span>Git commit -m "[mensaje]" ➟</span>Hace commit con un mensaje</p>
-                </div>
-                <div class="layer">
-                    <p id="p6"><span>Git push -u [repositorio-remoto] [rama] ➟</span>Sube a git los archivos</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="layer">
-                    <div class="card">
-                        <div class="card-text">
-                            <h2>Más comandos</h2>
-                            <p>Para ver todos los comandos pulsa en el botón</p>
-                        </div>
-                        <div>
-                            <a class="button" href="git2.html">Acceder a los comandos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header>
+        <h1>Tema 1 - GIT</h1>
+    </header>
+    <div class="layout">
+        <aside>
+            <a href="index.html">Volver a inicio</a>
+        </aside>
+        <main>
+            <h2>Control de versiones</h2>
+            <p>
+                GIT: es un SERVICIO (estándar) de comunicación y gestión de información entre local y remoto.
+            </p>
+            <h3>Áreas</h3>
+            <ul>
+                <li>Directorio de trabajo</li>
+                <li>Staging</li>
+                <li>Repositorio Local</li>
+                <li>Repositorio Remoto</li>
+            </ul>
+            <h3>Estado de los ficheros</h3>
+            <ul>
+                <li>Untracked</li>
+                <li>Unmodified</li>
+                <li>Modified</li>
+                <li>Staged</li>
+                <li>Comitted</li>
+            </ul>
+            <h3>Trabajando con ramas</h3>
+            <ul>
+                <li>Bifurcaciones de nuevas versiones, con respecto a la rama máster.</li>
+                <li>Todos los commit se aplican sobre una rama.</li>
+                <li>Por defecto trabajamos sobre la rama máster.</li>
+                <li>Crear una rama consiste en copiar un commit de una rama determinada, pásalo a la nueva rama y continuar el trabajo, sin afectar el flujo del trabajo principal.</li>
+            </ul>
+            <h3>Comandos</h3>
+            <ul>
+                <li>git init 🡢</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </main>
+        <footer>
+            <h4>Fernando José González Bernáldez</h4>
+            <h4>2ºDAW</h4>
+        </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-    <script src="./script.js"></script>
+    <nav>
+        <div><a href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg></a></div>
+        <div><a href="index.html"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-triangle-inverted"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.363 20.405l-8.106 -13.534a1.914 1.914 0 0 1 1.636 -2.871h16.214a1.914 1.914 0 0 1 1.636 2.871l-8.106 13.534a1.914 1.914 0 0 1 -3.274 0z" /></svg></a></div>
+        <div><a href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg></a></div>
+    </nav>
 </body>
 </html>

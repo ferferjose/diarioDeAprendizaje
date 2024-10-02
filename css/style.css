@@ -1,3 +1,18 @@
+/* 
+Azul Medianoche (#2C3E50): Background 
+
+Azul Grisáceo (#F5F5DC): encabezados elementos de navegacion y 
+areas destacadas.
+
+Blanco (#FFFFFF): Container
+
+Gris Claro (#D5DBDB): Texto principal y elementos secundaerios.
+
+Gris Oscuro (#95A5A6):Resaltar texto.
+
+
+*/
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap";
 :root {
   --main-color: #f7c110;
@@ -5,6 +20,10 @@
   --ray-color: #f5de11;
   --spark-color: #f59f1f;
   --back-color: #111111;
+  --background: #2C3E50;
+  --destacado: #F5F5DC;
+  --texto: #D5DBDB;
+  --resaltar: #95A5A6;
 }
 *{
   margin: 0;

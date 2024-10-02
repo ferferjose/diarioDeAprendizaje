@@ -1,0 +1,118 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap";
+:root {
+    --background: #2C3E50;
+    --destacado: #F5F5DC;
+    --texto: #D5DBDB;
+    --resaltar: #95A5A6;
+    --importante: #D2B48C;
+    --aside: #34495E;
+    --aside2: #1F2C39
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body{
+    background-color: var(--background);
+    color: #D5DBDB;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+header{
+    min-height: 10vh;
+    border-bottom: 2px solid var(--importante);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    
+    height: 7vh;
+    max-width: 98%;
+    margin: 0 auto;
+    background-color: #1f2c39;
+    border-radius:  5px;
+    border: 1px solid var(--importante);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 1280px) {
+    nav{
+        display: none;
+    }
+}
+@media (max-width: 1280px) {
+    aside{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+@media (min-width: 1280px) {
+    .layout{
+        position: relative;
+        display: grid;
+        grid-template-columns: 15vw 85vw;
+        grid-template-rows: auto 5vw;
+    }
+    aside{
+        grid-row: 1 / 3;
+        background-color: var(--aside);
+        border-right: 2px solid var(--importante);
+    }
+    footer{
+        background-color: var(--aside2);
+        border-top: 2px solid var(--importante);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: var(--destacado);
+    }
+}
+main{
+    margin: 20px 10%;
+    text-align: left;
+}
+main p{
+    margin: 2px 5%;
+}
+h1{
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    font-size: 3rem;
+    text-align: center;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    margin-top: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+h4{
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+ul{
+    margin-left: 5%;
+}
+li{
+    margin-top: 2px;
+}
+
+
