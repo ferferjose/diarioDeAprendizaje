@@ -9,25 +9,39 @@
 </head>
 <body>
     <header>
-        <h1>Tema 1 - GIT</h1>
+        <h1 id="t1">Tema 1 - GIT</h1>
     </header>
     <div class="layout">
         <aside>
-            <a href="index.html">Volver a inicio</a>
+            <div>
+                <a href="index.html">Inicio</a>
+            </div>
+            <div class="indice">
+                <a href="git.html#t1">Tema 1 - Git</a>
+                <div class="subindice">
+                    <a href="git.html#areas">Areas</a>
+                    <a href="git.html#eficheros">Estado de ficheros</a>
+                    <a href="git.html#ramas">Trabajar con ramas</a>
+                    <a href="git.html#comandosp">Comandos principales</a>
+                    <a href="git.html#otrosc">Otros Comandos</a>
+                </div>
+                
+            </div>
+            
         </aside>
         <main>
             <h2>Control de versiones</h2>
             <p>
                 GIT: es un SERVICIO (estándar) de comunicación y gestión de información entre local y remoto.
             </p>
-            <h3>Áreas</h3>
+            <h3 id="areas">Áreas</h3>
             <ul>
                 <li>Directorio de trabajo</li>
                 <li>Staging</li>
                 <li>Repositorio Local</li>
                 <li>Repositorio Remoto</li>
             </ul>
-            <h3>Estado de los ficheros</h3>
+            <h3 id="eficheros">Estado de los ficheros</h3>
             <ul>
                 <li>Untracked</li>
                 <li>Unmodified</li>
@@ -35,25 +49,41 @@
                 <li>Staged</li>
                 <li>Comitted</li>
             </ul>
-            <h3>Trabajando con ramas</h3>
+            <h3 id="ramas">Trabajar con ramas</h3>
             <ul>
                 <li>Bifurcaciones de nuevas versiones, con respecto a la rama máster.</li>
                 <li>Todos los commit se aplican sobre una rama.</li>
                 <li>Por defecto trabajamos sobre la rama máster.</li>
                 <li>Crear una rama consiste en copiar un commit de una rama determinada, pásalo a la nueva rama y continuar el trabajo, sin afectar el flujo del trabajo principal.</li>
             </ul>
-            <h3>Comandos</h3>
+            <h3 id="comandosp">Comandos Principales</h3>
             <ul>
-                <li>git init 🡢</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><span class="code negrita">git init</span> 🡢 Inicia el proyecto</li>
+                <li><span class="code negrita">git add .</span> 🡢  Añade los archivos al proyecto</li>
+                <li><span class="code negrita">git branch -M main</span> 🡢  Crea una rama</li>
+                <li><span class="code negrita">git remote add origin [url]</span> 🡢  Crea el repositorio remoto</li>
+                <li><span class="code negrita">git commit -m "Mensaje"</span> 🡢  Hace el commit con un mensaje</li>
+                <li><span class="code negrita">git push -u origin main</span> 🡢  Sube al repositorio todo</li>
+            </ul>
+            <h3 id="otrosc">Otros Comandos</h3>
+            <ul>
+                <li><span class="code negrita">git reset HEAD [nombre_archivo]</span> 🡢  Untrackea los archivos nombrados</li>
+                <li><span class="code negrita">git log --oneline --all</span> 🡢  git log --oneline [--all]</li>
+                <li><span class="code negrita">git clean -n</span> 🡢 </li>
+                <li><span class="code negrita">git clean -f</span> 🡢 </li>
+                <li><span class="code negrita">git git push -u origin main</span> 🡢 </li>
+                <li><span class="code negrita">git checkout [id_commit]</span> 🡢 </li>
+                <li><span class="code negrita">git checkout [branch]</span> 🡢 </li>
+                <li><span class="code negrita">git reset --soft HEAD^</span> 🡢 </li>
+                <li><span class="code negrita">git reset --mixed HEAD^</span> 🡢 </li>
+                <li><span class="code negrita">git reset --hard HEAD^</span> 🡢 </li>
+                <li><span class="code negrita">git revert [id_commit]</span> 🡢 </li>
+                <li><span class="code negrita">git tag -a [nombre] -m "Descripcion o mensaje"</span> 🡢 </li>
+                <li><span class="code negrita">git tag -a [nombre] [id_commit] -m "Mensaje"</span> 🡢 </li>
+                <li><span class="code negrita">git push origin [nombre_tag]</span> 🡢 </li>
+                <li><span class="code negrita">git commit --amend -m "Texto"</span> 🡢 </li>
+                <li><span class="code negrita">git revert [nombre_rama]~[numero_commit] [nombre_Rama]~[numero_commit]</span> 🡢 </li>
+                <li><span class="code negrita">git tag -a [nombre] -m "Descripcion o mensaje"</span> 🡢 </li>
             </ul>
         </main>
         <footer>
