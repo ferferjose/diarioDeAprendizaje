@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diario de aprendizaje</title>
+    <link rel="stylesheet" href="./css/style2.css" />
+</head>
+<body>
+    <header>
+        <h1 id="t1">Tema 1 - GIT</h1>
+    </header>
+    <div class="layout">
+        <aside>
+            <div>
+                <a href="index.html">Inicio</a>
+            </div>
+            <div class="indice">
+                <a href="git.html#t1">Tema 1 - Git</a>
+                <div class="subindice">
+                    <a href="git.html#areas">Areas</a>
+                    <a href="git.html#eficheros">Estado de ficheros</a>
+                    <a href="git.html#ramas">Trabajar con ramas</a>
+                    <a href="git.html#comandosp">Comandos principales</a>
+                    <a href="git.html#otrosc">Otros Comandos</a>
+                </div>
+                
+            </div>
+            
+        </aside>
+        <main>
+            <h2>Control de versiones</h2>
+            <p>
+                GIT: es un SERVICIO (estándar) de comunicación y gestión de información entre local y remoto.
+            </p>
+            <h3 id="areas">Áreas</h3>
+            <ul>
+                <li>Directorio de trabajo</li>
+                <li>Staging</li>
+                <li>Repositorio Local</li>
+                <li>Repositorio Remoto</li>
+            </ul>
+            <h3 id="eficheros">Estado de los ficheros</h3>
+            <ul>
+                <li>Untracked</li>
+                <li>Unmodified</li>
+                <li>Modified</li>
+                <li>Staged</li>
+                <li>Comitted</li>
+            </ul>
+            <h3 id="ramas">Trabajar con ramas</h3>
+            <ul>
+                <li>Bifurcaciones de nuevas versiones, con respecto a la rama máster.</li>
+                <li>Todos los commit se aplican sobre una rama.</li>
+                <li>Por defecto trabajamos sobre la rama máster.</li>
+                <li>Crear una rama consiste en copiar un commit de una rama determinada, pásalo a la nueva rama y continuar el trabajo, sin afectar el flujo del trabajo principal.</li>
+            </ul>
+            <h3 id="comandosp">Comandos Principales</h3>
+            <ul>
+                <li><span class="code negrita">git init</span> 🡢 Inicia el proyecto</li>
+                <li><span class="code negrita">git add .</span> 🡢  Añade los archivos al proyecto</li>
+                <li><span class="code negrita">git branch –m [old_nombre_rama] [new_nombre_rama]</span> 🡢  cambia el nombre de una rama</li>
+                <li><span class="code negrita">git remote add origin [url]</span> 🡢  Crea el repositorio remoto</li>
+                <li><span class="code negrita">git commit -m "Mensaje"</span> 🡢  Hace el commit con un mensaje</li>
+                <li><span class="code negrita">git push -u origin main</span> 🡢  Sube al repositorio todo</li>
+                <li><span class="code negrita">git clone [remote_repo] [directory_local]</span> 🡢  se usa para copiar un
+                    repositorio remoto en local.</li>
+                <li><span class="code negrita">git pull [servidor_remoto]</span> 🡢  fusiona todos los cambios que se han hecho
+                    en el repositorio remoto con el directorio de trabajo local.</li>
+                <li><span class="code negrita">git fetch [nombre_servidor_remoto]</span> 🡢 recupera todos los datos del proyecto remoto que no tengas todavía en el repositorio local.</li>
+                <li><span class="code negrita">git merge [nombre rama]</span> 🡢 se usa para fusionar una rama con otra rama activa.</li>
+            </ul>
+            <h3 id="otrosc">Otros Comandos</h3>
+            <ul>
+                <li><span class="code negrita">git show</span> 🡢 te permite ver el último commit a qué ramas se encuentra pegado.</li>
+                <li><span class="code negrita">git reset HEAD [nombre_archivo]</span> 🡢  Untrackea los archivos nombrados</li>
+                <li><span class="code negrita">git log --oneline --all</span> 🡢  Nos enseña los commits hechos de todas las ramas</li>
+                <li><span class="code negrita">git clean -n</span> 🡢 Te dice que archivos se van a borrar (solo untrackeds)</li>
+                <li><span class="code negrita">git clean -f</span> 🡢 Borra los archivos untracked</li>
+                <li><span class="code negrita">git checkout [id_commit]</span> 🡢 Te lleva a ese commit</li>
+                <li><span class="code negrita">git checkout [branch]</span> 🡢 Te lleva a esa rama</li>
+                <li><span class="code negrita">git reset --soft HEAD^</span> 🡢 Te lleva al commit anterior borrando el actual y poniendo los archivos en added</li>
+                <li><span class="code negrita">git reset --mixed HEAD^</span> 🡢 Te lleva al commit anterior borrando el actual y poniendo los archivos en untracked</li>
+                <li><span class="code negrita">git reset --hard HEAD^</span> 🡢 Te lleva al commit anterior borrando el actual y borra los archivos</li>
+                <li><span class="code negrita">git revert [id_commit]</span> 🡢 Revierte un commit específico creando un nuevo commit que deshace los cambios del commit mencionado.</li>
+                <li><span class="code negrita">git tag -a [nombre] -m "Descripción o mensaje"</span> 🡢 Crea una etiqueta anotada con un nombre y un mensaje descriptivo, útil para marcar versiones.</li>
+                <li><span class="code negrita">git tag -a [nombre] [id_commit] -m "Mensaje"</span> 🡢 Asigna una etiqueta anotada a un commit específico con un mensaje que describe la etiqueta.</li>
+                <li><span class="code negrita">git push origin [nombre_tag]</span> 🡢 Sube una etiqueta (tag) específica al repositorio remoto para compartirla con otros usuarios.</li>
+                <li><span class="code negrita">git commit --amend -m "Texto"</span> 🡢 Permite modificar el mensaje del último commit, ideal para corregir errores en el mensaje.</li>
+                <li><span class="code negrita">git revert [nombre_rama]~[numero_commit] [nombre_rama]~[numero_commit]</span> 🡢 Revierte uno o más commits en una rama especificando la posición de los commits que quieres deshacer.</li>
+                <li><span class="code negrita">git tag -a [nombre] -m "Descripción o mensaje"</span> 🡢 Crea una nueva etiqueta anotada con un nombre y mensaje, útil para marcar versiones o puntos importantes.</li>
+                <li><span class="code negrita">git pull [servidor_remoto] [rama]</span> 🡢 se baja una rama del servidor remoto</li>
+                <li><span class="code negrita">git diff</span> 🡢 se usa para ver una lista de todos los conflictos presentes</li>
+                <li><span class="code negrita">git diff [branch_origen] [branch_destino]</span> 🡢 ver los conflictos que hay entre ramas, por ejemplo antes de fusionarlas.</li>
+                <li><span class="code negrita">git merge --abort</span> 🡢 descarta la fusión por conflictos en la misma.</li>
+            </ul>
+            <div class="parteBaja">
+                <a href="git.html#t1">Volver arriba</a>
+                <a href="httpyDns.html">Tema siguiente</a>
+            </div>
+        </main>
+        <footer>
+            <h4>Fernando José González Bernáldez</h4>
+            <h4>2ºDAW</h4>
+        </footer>
+    </div>
+    <nav>
+        <div><a href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg></a></div>
+        <div><a href="index.html"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-triangle-inverted"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.363 20.405l-8.106 -13.534a1.914 1.914 0 0 1 1.636 -2.871h16.214a1.914 1.914 0 0 1 1.636 2.871l-8.106 13.534a1.914 1.914 0 0 1 -3.274 0z" /></svg></a></div>
+        <div><a href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#D2B48C"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg></a></div>
+    </nav>
+</body>
+</html>
