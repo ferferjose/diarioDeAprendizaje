@@ -191,5 +191,15 @@ section img{
 img{
     width: 100%;
 }
+section a:visited{
+    color: var(--resaltar);
+}
+section a:hover{
+    color: var(--importante);
+
+}
+section a{
+    color: var(--resaltar);
+}
 
 
